@@ -418,18 +418,18 @@ function [imageData, alpha] = export_fig(varargin) %#ok<*STRCL1,*DATST,*TNOW1>
     pause(0.05);  % this solves timing issues with Java Swing's EDT (http://undocumentedmatlab.com/blog/solving-a-matlab-hang-problem)
 
     % Display promo (just once every 10 days!)
-    persistent promo_time
-    if isempty(promo_time)
-        try promo_time = getpref('export_fig','promo_time'); catch, promo_time=-inf; end
-    end
-    if abs(now-promo_time) > 10 && ~isdeployed
-        programsCrossCheck;
-        msg = char('Gps!qspgfttjpobm!Nbumbc!bttjtubodf-!qmfbtf!dpoubdu!=%?'-1);
-        url = char('iuuqt;00VoepdvnfoufeNbumbc/dpn0dpotvmujoh'-1);
-        displayPromoMsg(msg, url);
-        promo_time = now;
-        setpref('export_fig','promo_time',now)
-    end
+    %persistent promo_time
+    %if isempty(promo_time)
+    %    try promo_time = getpref('export_fig','promo_time'); catch, promo_time=-inf; end
+    %end
+    %if abs(now-promo_time) > 10 && ~isdeployed
+    %    programsCrossCheck;
+    %    msg = char('Gps!qspgfttjpobm!Nbumbc!bttjtubodf-!qmfbtf!dpoubdu!=%?'-1);
+    %    url = char('iuuqt;00VoepdvnfoufeNbumbc/dpn0dpotvmujoh'-1);
+    %    displayPromoMsg(msg, url);
+    %    promo_time = now;
+    %    setpref('export_fig','promo_time',now)
+    %end
 
     % Use the current figure as the default figure handle
     % temporarily set ShowHiddenHandles='on' to access figure with HandleVisibility='off'
